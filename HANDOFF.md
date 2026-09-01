@@ -34,18 +34,18 @@ funcionando via Vercel. Fluxo completo testado com projeto fictício de cliente.
 | 2026-09-01 | Repositório subido para o GitHub em github.com/LuSan1986/template-site-institucional e marcado como "Template repository" |
 | 2026-09-01 | Fluxo de reuso testado com projeto fictício "teste-cliente-fake" (Padaria Dona Célia): criado via "Use this template", personalizado (nome, cores âmbar, textos) com Claude Code e publicado no Vercel com sucesso |
 | 2026-09-01 | Validado: conexão Vercel → GitHub, import automático do framework Next.js e deploy automático a cada push na branch main |
+| 2026-09-01 | Repositório de teste `teste-cliente-fake` apagado do GitHub e projeto correspondente removido do Vercel |
 
 ---
 
 ## Próximos Passos
 
-1. Apagar o repositório de teste (`teste-cliente-fake`) no GitHub e o projeto correspondente no Vercel.
-2. Adicionar mais seções ao template (ex: depoimentos, galeria, formulário de contato funcional).
-3. Testar o processo de conectar um domínio próprio no Vercel.
-4. Definir processo comercial: precificação, uso do `briefing-cliente.md`, entrega ao cliente.
-5. Começar levantamento de requisitos do primeiro cliente real usando `docs/briefing-cliente.md`.
-6. Conectar formulário de contato a um serviço de e-mail (ex: Resend).
-7. Configurar Google Analytics no `layout.tsx`.
+1. Adicionar mais seções ao template (ex: depoimentos, galeria, formulário de contato funcional).
+2. Testar o processo de conectar um domínio próprio no Vercel.
+3. Definir processo comercial: precificação, uso do `briefing-cliente.md`, entrega ao cliente.
+4. Começar levantamento de requisitos do primeiro cliente real usando `docs/briefing-cliente.md`.
+5. Conectar formulário de contato a um serviço de e-mail (ex: Resend).
+6. Configurar Google Analytics no `layout.tsx`.
 
 ---
 
@@ -68,8 +68,7 @@ funcionando via Vercel. Fluxo completo testado com projeto fictício de cliente.
 ## Pendências / Bloqueios
 
 - Nenhuma pendência crítica no momento.
-- A fazer (não bloqueante): apagar repositório e projeto Vercel do teste `teste-cliente-fake`.
 
 ---
 
-*Última atualização: 2026-09-01 (sessão 2)*
+*Última atualização: 2026-09-01 (sessão 3)*
