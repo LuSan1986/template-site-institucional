@@ -6,8 +6,8 @@ Registro de andamento do projeto. Atualizado ao final de cada sessão de trabalh
 
 ## Status Atual
 
-Template base criado e configurado. Pronto para ser copiado e usado como ponto de partida
-para o primeiro projeto de cliente.
+Template completo com componentes base criados e build de produção verificado.
+Falta subir ao GitHub e iniciar o primeiro projeto de cliente real.
 
 ---
 
@@ -25,17 +25,22 @@ para o primeiro projeto de cliente.
 | 2026-09-01 | `README.md` criado explicando o template e como usá-lo para novos projetos de clientes |
 | 2026-09-01 | `LICENSE` criado com licença MIT |
 | 2026-09-01 | Repositório Git local inicializado com primeiro commit organizado |
+| 2026-09-01 | Componentes base criados: `Button`, `NavBar`, `HeroSection`, `Section`, `Footer` |
+| 2026-09-01 | Utilitário `cn` criado em `src/lib/utils.ts` (clsx + tailwind-merge) |
+| 2026-09-01 | `tailwind.config.ts` configurado com paleta de cores de marca (`brand`, `brand-dark`, `brand-light`) |
+| 2026-09-01 | `page.tsx` substituída por página de exemplo completa (Início, Sobre, Serviços, Contato) |
+| 2026-09-01 | Build de produção executado e aprovado sem erros (`npm run build`) |
 
 ---
 
 ## Próximos Passos
 
-1. Criar repositório remoto no GitHub e fazer push do template.
-2. Desenvolver componentes base reutilizáveis (NavBar, Footer, HeroSection, Section, Button).
-3. Criar página inicial de exemplo (`src/app/page.tsx`) usando os componentes base.
-4. Adicionar utilitário `cn` (merge de classes Tailwind) em `src/lib/utils.ts`.
-5. Configurar fonte padrão e cores base no `tailwind.config.ts`.
-6. Começar levantamento de requisitos do primeiro cliente real usando `docs/briefing-cliente.md`.
+1. Criar repositório no GitHub e fazer push do template.
+2. Começar levantamento de requisitos do primeiro cliente real usando `docs/briefing-cliente.md`.
+3. Criar novo repositório a partir deste template para o primeiro cliente.
+4. Adaptar cores, textos e imagens para o cliente.
+5. Conectar formulário de contato a um serviço de e-mail (ex: Resend).
+6. Configurar Google Analytics no `layout.tsx`.
 
 ---
 
@@ -48,12 +53,14 @@ para o primeiro projeto de cliente.
 | Deploy no Vercel | Integração nativa com Next.js, deploy automático por branch, HTTPS grátis |
 | Licença MIT | Permite uso comercial, redistribuição e modificação livre, sem restrições para os clientes |
 | Projeto em `C:\Projetos\` (fora do OneDrive) | Evitar conflitos de sincronização do OneDrive com `node_modules` e arquivos de build |
+| clsx + tailwind-merge para classes CSS | Evita conflitos de classes Tailwind ao combinar condicionalmente; padrão da comunidade |
+| Componentes com props opcionais e valores padrão | Facilita o reuso: copia o componente e só muda o que precisar, sem quebrar nada |
 
 ---
 
 ## Pendências / Bloqueios
 
-- Nenhuma pendência no momento.
+- Repositório remoto no GitHub ainda não criado (pendente ação manual do desenvolvedor).
 
 ---
 
