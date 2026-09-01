@@ -6,8 +6,9 @@ Registro de andamento do projeto. Atualizado ao final de cada sessão de trabalh
 
 ## Status Atual
 
-Template completo com componentes base criados e build de produção verificado.
-Falta subir ao GitHub e iniciar o primeiro projeto de cliente real.
+Template validado de ponta a ponta: criação, GitHub, deploy no Vercel.
+Repositório público marcado como "Template repository" no GitHub e deploy automático
+funcionando via Vercel. Fluxo completo testado com projeto fictício de cliente.
 
 ---
 
@@ -30,17 +31,21 @@ Falta subir ao GitHub e iniciar o primeiro projeto de cliente real.
 | 2026-09-01 | `tailwind.config.ts` configurado com paleta de cores de marca (`brand`, `brand-dark`, `brand-light`) |
 | 2026-09-01 | `page.tsx` substituída por página de exemplo completa (Início, Sobre, Serviços, Contato) |
 | 2026-09-01 | Build de produção executado e aprovado sem erros (`npm run build`) |
+| 2026-09-01 | Repositório subido para o GitHub em github.com/LuSan1986/template-site-institucional e marcado como "Template repository" |
+| 2026-09-01 | Fluxo de reuso testado com projeto fictício "teste-cliente-fake" (Padaria Dona Célia): criado via "Use this template", personalizado (nome, cores âmbar, textos) com Claude Code e publicado no Vercel com sucesso |
+| 2026-09-01 | Validado: conexão Vercel → GitHub, import automático do framework Next.js e deploy automático a cada push na branch main |
 
 ---
 
 ## Próximos Passos
 
-1. Criar repositório no GitHub e fazer push do template.
-2. Começar levantamento de requisitos do primeiro cliente real usando `docs/briefing-cliente.md`.
-3. Criar novo repositório a partir deste template para o primeiro cliente.
-4. Adaptar cores, textos e imagens para o cliente.
-5. Conectar formulário de contato a um serviço de e-mail (ex: Resend).
-6. Configurar Google Analytics no `layout.tsx`.
+1. Apagar o repositório de teste (`teste-cliente-fake`) no GitHub e o projeto correspondente no Vercel.
+2. Adicionar mais seções ao template (ex: depoimentos, galeria, formulário de contato funcional).
+3. Testar o processo de conectar um domínio próprio no Vercel.
+4. Definir processo comercial: precificação, uso do `briefing-cliente.md`, entrega ao cliente.
+5. Começar levantamento de requisitos do primeiro cliente real usando `docs/briefing-cliente.md`.
+6. Conectar formulário de contato a um serviço de e-mail (ex: Resend).
+7. Configurar Google Analytics no `layout.tsx`.
 
 ---
 
@@ -53,6 +58,8 @@ Falta subir ao GitHub e iniciar o primeiro projeto de cliente real.
 | Deploy no Vercel | Integração nativa com Next.js, deploy automático por branch, HTTPS grátis |
 | Licença MIT | Permite uso comercial, redistribuição e modificação livre, sem restrições para os clientes |
 | Projeto em `C:\Projetos\` (fora do OneDrive) | Evitar conflitos de sincronização do OneDrive com `node_modules` e arquivos de build |
+| Repositório do template privado; clientes via "Use this template" | Separação clara entre template base e projetos de clientes; cada cliente tem seu próprio repositório |
+| Vercel configurado como "Only select repositories" | Segurança: apenas repositórios explicitamente autorizados têm acesso ao Vercel; novos projetos de clientes são adicionados manualmente |
 | clsx + tailwind-merge para classes CSS | Evita conflitos de classes Tailwind ao combinar condicionalmente; padrão da comunidade |
 | Componentes com props opcionais e valores padrão | Facilita o reuso: copia o componente e só muda o que precisar, sem quebrar nada |
 
@@ -60,8 +67,9 @@ Falta subir ao GitHub e iniciar o primeiro projeto de cliente real.
 
 ## Pendências / Bloqueios
 
-- Repositório remoto no GitHub ainda não criado (pendente ação manual do desenvolvedor).
+- Nenhuma pendência crítica no momento.
+- A fazer (não bloqueante): apagar repositório e projeto Vercel do teste `teste-cliente-fake`.
 
 ---
 
-*Última atualização: 2026-09-01*
+*Última atualização: 2026-09-01 (sessão 2)*
