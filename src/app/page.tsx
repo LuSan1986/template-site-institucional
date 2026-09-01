@@ -1,101 +1,140 @@
-import Image from "next/image";
+import NavBar from "@/components/NavBar";
+import HeroSection from "@/components/HeroSection";
+import Section from "@/components/Section";
+import Footer from "@/components/Footer";
+import Button from "@/components/Button";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <NavBar logo="MinhaEmpresa" />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+      <main>
+        <HeroSection
+          title="Sua empresa merece um site que converte"
+          subtitle="Ajudamos pequenas e médias empresas a ter presença digital profissional, atrair clientes e crescer online."
+          ctaPrimaryLabel="Fale conosco"
+          ctaPrimaryHref="#contato"
+          ctaSecondaryLabel="Conheça nossos serviços"
+          ctaSecondaryHref="#servicos"
+        />
+
+        {/* Seção Sobre */}
+        <Section id="sobre" background="white">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Sobre nós
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed mb-4">
+                Parágrafo de apresentação da empresa. Conte quem vocês são, há
+                quanto tempo atuam no mercado e qual é a missão do negócio.
+              </p>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                Um segundo parágrafo reforçando os valores ou a história da empresa.
+                Humanize a marca aqui.
+              </p>
+            </div>
+            <div className="bg-gray-100 rounded-2xl h-64 md:h-80 flex items-center justify-center text-gray-400">
+              {/* Substituir pela foto da equipe ou imagem da empresa */}
+              Imagem aqui
+            </div>
+          </div>
+        </Section>
+
+        {/* Seção Serviços */}
+        <Section id="servicos" background="gray">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-4">
+            Nossos serviços
+          </h2>
+          <p className="text-gray-600 text-lg text-center max-w-2xl mx-auto mb-12">
+            Subtitle descrevendo os serviços de forma objetiva.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Serviço 1",
+                description:
+                  "Descrição curta do serviço. O que é, para quem é e qual resultado entrega.",
+              },
+              {
+                title: "Serviço 2",
+                description:
+                  "Descrição curta do serviço. O que é, para quem é e qual resultado entrega.",
+              },
+              {
+                title: "Serviço 3",
+                description:
+                  "Descrição curta do serviço. O que é, para quem é e qual resultado entrega.",
+              },
+            ].map((service) => (
+              <div
+                key={service.title}
+                className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100"
+              >
+                <div className="w-12 h-12 bg-brand-light rounded-xl mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        {/* Seção Contato */}
+        <Section id="contato" background="white">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Entre em contato
+            </h2>
+            <p className="text-gray-600 text-lg mb-10">
+              Preencha o formulário abaixo e responderemos em até 24 horas.
+            </p>
+
+            <form className="text-left flex flex-col gap-5">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Nome
+                </label>
+                <input
+                  type="text"
+                  placeholder="Seu nome completo"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  E-mail
+                </label>
+                <input
+                  type="email"
+                  placeholder="seu@email.com"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Mensagem
+                </label>
+                <textarea
+                  rows={5}
+                  placeholder="Conte um pouco sobre o seu projeto..."
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand resize-none"
+                />
+              </div>
+              <Button type="submit" size="lg" className="w-full">
+                Enviar mensagem
+              </Button>
+            </form>
+          </div>
+        </Section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+      <Footer companyName="MinhaEmpresa" />
+    </>
   );
 }
