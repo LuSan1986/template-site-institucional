@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# template-site-institucional
 
-## Getting Started
+Template base para criação de sites institucionais para clientes.
+Construído com Next.js 14, TypeScript e Tailwind CSS, pronto para deploy no Vercel.
 
-First, run the development server:
+---
+
+## O que é este repositório?
+
+Este é um template reutilizável que serve como ponto de partida para cada novo projeto
+de site institucional. Ele já inclui a configuração de stack, a estrutura de pastas,
+documentação de processo e convenções de código.
+
+Cada projeto de cliente nasce como uma cópia independente deste repositório.
+
+---
+
+## Como usar para um novo projeto de cliente
+
+1. **Crie um novo repositório no GitHub** com o nome do cliente (ex: `site-acme`).
+
+2. **Clone este template localmente:**
+   ```bash
+   git clone <url-deste-repositorio> site-acme
+   cd site-acme
+   ```
+
+3. **Conecte ao novo repositório remoto:**
+   ```bash
+   git remote set-url origin <url-do-novo-repositorio>
+   git push -u origin main
+   ```
+
+4. **Configure as variáveis de ambiente:**
+   ```bash
+   cp .env.example .env.local
+   # Edite .env.local com os dados reais do cliente
+   ```
+
+5. **Faça o levantamento de requisitos** usando `docs/briefing-cliente.md`.
+
+6. **Desenvolva o site** seguindo as convenções descritas em `CLAUDE.md`.
+
+7. **Faça o deploy** seguindo o passo a passo em `docs/deploy.md`.
+
+---
+
+## Como rodar o projeto localmente
+
+**Pré-requisitos:** Node.js 18+ e npm instalados.
 
 ```bash
+# Instalar dependências
+npm install
+
+# Copiar variáveis de ambiente
+cp .env.example .env.local
+
+# Iniciar servidor de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Outros comandos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build   # Gerar build de produção
+npm run start   # Rodar build de produção localmente
+npm run lint    # Verificar erros de lint
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Estrutura de Pastas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+  app/          # Páginas e layouts (Next.js App Router)
+  components/   # Componentes reutilizáveis
+  styles/       # Estilos globais
+public/
+  assets/       # Imagens e arquivos estáticos
+docs/
+  briefing-cliente.md   # Roteiro para levantamento de requisitos
+  deploy.md             # Guia de deploy no Vercel
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [Next.js 14](https://nextjs.org) — App Router
+- [TypeScript](https://www.typescriptlang.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Vercel](https://vercel.com) — Deploy e hospedagem
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Licença
+
+MIT — veja o arquivo [LICENSE](./LICENSE) para detalhes.
